@@ -11,7 +11,7 @@ Aplicación móvil académica para gestionar materias, notas, trabajos y asistan
 <div>
 <h4>Lenguaje y entorno</h4>
 <img alt="Kotlin" src="https://img.shields.io/badge/Kotlin-d9d9d9?style=for-the-badge&logo=kotlin&logoColor=000000">
-<img alt="Android Studio" src="https://img.shields.io/badge/Android Studio-d9d9d9?style=for-the-badge&logo=androidstudio&logoColor=d9d9d9">
+<img alt="Android Studio" src="https://img.shields.io/badge/Android Studio-d9d9d9?style=for-the-badge&logo=androidstudio&logoColor=000000">
 
 <h4>Herramientas</h4>
 <img alt="XML" src="https://img.shields.io/badge/XML-d9d9d9?style=for-the-badge&logo=XML&logoColor=000000">
