@@ -4,18 +4,31 @@
     <item
         android:id="@+id/nav_home"
         android:title="Inicio"
-        android:icon="@android:drawable/ic_menu_view" />
+        android:icon="@drawable/baseline_home_24" />
 
     <item
-        android:id="@+id/nav_settings"
-        android:title="Configuración"
-        android:icon="@android:drawable/ic_menu_manage" />
+        android:id="@+id/nav_calificaciones"
+        android:title="Calificaciones"
+        android:icon="@drawable/description_24px" />
 
+    <item
+        android:id="@+id/nav_vencimientos"
+        android:title="Vencimientos"
+        android:icon="@drawable/schedule_24px" />
 
+    <item
+        android:id="@+id/nav_cronograma"
+        android:title="Cronograma"
+        android:icon="@drawable/calendar_month_24px" />
+
+    <item
+        android:id="@+id/nav_presentismo"
+        android:title="Presentismo"
+        android:icon="@drawable/check_circle_24px" />
 
     <item
         android:id="@+id/nav_about"
         android:title="Acerca de"
-        android:icon="@android:drawable/ic_menu_info_details" />
+        android:icon="@drawable/info_24px" />
 
 </menu>

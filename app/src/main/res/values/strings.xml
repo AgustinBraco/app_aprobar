@@ -1,5 +1,7 @@
 <resources>
-    <string name="app_name">Aprobar</string>
+    <string name="app_name">Campus Virtual</string>
+    <string name="action_settings">Configurar</string>
+    <string name="large_text">Este es un texto de prueba largo.</string>
     <string name="title_activity_scrolling">ScrollingActivity</string>
     <string name="navigation_drawer_open">Abrir menú</string>
     <string name="navigation_drawer_close">Cerrar menú</string>
