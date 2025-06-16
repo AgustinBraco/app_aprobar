@@ -6,4 +6,10 @@
     </style>
 
     <style name="Theme.Aprobar" parent="Base.Theme.Aprobar" />
+    <style name="Theme.Aprobar.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+    <style name="Theme.Aprobar.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="Theme.Aprobar.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 </resources>

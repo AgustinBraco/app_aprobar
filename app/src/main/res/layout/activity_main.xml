@@ -1,44 +1,56 @@
-<LinearLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/main"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:orientation="vertical"
-    android:gravity="center"
     android:background="#FFFFFF"
-    >
+    android:gravity="center"
+    android:orientation="vertical">
 
     <!-- Texto de bienvenida -->
     <TextView
         android:id="@+id/tvBienvenida"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="20dp"
         android:text="Bienvenido a Mi Cursada"
-        android:textSize="20sp"
         android:textColor="#000000"
-        android:layout_marginBottom="20dp"/>
+        android:textSize="25sp" />
 
     <!-- Logo -->
     <ImageView
         android:id="@+id/logoImage"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:src="@drawable/logoinstituto"
-        android:layout_marginBottom="40dp" />
+        android:layout_width="250dp"
+        android:layout_height="250dp"
+        android:layout_marginBottom="40dp"
+        android:src="@drawable/logoinstituto" />
 
     <!-- Botón Iniciar Sesión -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnIniciarSesion"
+        android:layout_gravity="center_horizontal"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
+        android:layout_height="48dp"
         android:text="Iniciar sesión"
-        android:layout_marginBottom="20dp" />
+        android:background="@drawable/boton_fondo"
+        android:textColor="@android:color/white"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:padding="12dp" />
 
-    <!-- Botón Registrarse -->
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/btnRegistrarse"
+        android:layout_gravity="center_horizontal"
         android:layout_width="200dp"
-        android:layout_height="wrap_content"
-        android:text="Registrarse" />
+        android:layout_height="48dp"
+        android:text="Registrarse"
+        android:background="@drawable/boton_con_borde"
+        android:textColor="#0066CC"
+        android:textStyle="bold"
+        android:textAllCaps="false"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:padding="12dp" />
+
 
 </LinearLayout>
