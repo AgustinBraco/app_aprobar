@@ -55,7 +55,7 @@
             android:layout_marginBottom="4dp" />
 
         <EditText
-            android:id="@+id/etNombre"
+            android:id="@+id/etApellido"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="Perez"
@@ -74,7 +74,7 @@
             android:layout_marginBottom="4dp" />
 
         <EditText
-            android:id="@+id/etNombre"
+            android:id="@+id/etDni"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="12.345.678"
@@ -93,7 +93,7 @@
             android:layout_marginBottom="4dp" />
 
         <EditText
-            android:id="@+id/etNombre"
+            android:id="@+id/etEmail"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="juan.perez@gmail.com"
@@ -112,7 +112,7 @@
             android:layout_marginBottom="4dp" />
 
         <EditText
-            android:id="@+id/etNombre"
+            android:id="@+id/etPassword"
             android:layout_width="match_parent"
             android:layout_height="48dp"
             android:hint="********"
