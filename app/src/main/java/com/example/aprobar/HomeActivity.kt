@@ -16,11 +16,10 @@ import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Default
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Code
+        // Código
         val homeLayout = findViewById<ConstraintLayout>(R.id.home)
 
         // Aplicar margen superior dinámico

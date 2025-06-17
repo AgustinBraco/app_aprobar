@@ -11,11 +11,10 @@ import com.google.android.material.button.MaterialButton
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
-        // Default
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Code
+        // Código
         val mainLayout = findViewById<ConstraintLayout>(R.id.main)
         val btLogin = findViewById<MaterialButton>(R.id.btLogin)
 
