@@ -4,11 +4,11 @@ plugins {
 }
 
 android {
-    namespace = "com.example.micursada"
+    namespace = "com.example.aprobar"
     compileSdk = 35
 
     defaultConfig {
-        applicationId = "com.example.micursada"
+        applicationId = "com.example.aprobar"
         minSdk = 24
         targetSdk = 35
         versionCode = 1

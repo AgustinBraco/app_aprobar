@@ -1,4 +1,4 @@
-package com.example.micursada
+package com.example.aprobar
 
 import android.content.Intent
 import android.os.Bundle

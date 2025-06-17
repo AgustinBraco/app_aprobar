@@ -1,6 +1,6 @@
 <resources>
     <string name="app_name">Campus Virtual</string>
-    <string name="welcome">Bienvenido a MiCursada</string>
+    <string name="welcome">Bienvenido a AprobAR</string>
     <string name="logo">Imagen del logo de la institución</string>
     <string name="label_dni">DNI</string>
     <string name="value_dni">40123456</string>

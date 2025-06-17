@@ -1,6 +1,6 @@
 <img alt="gif" width=100% src="https://capsule-render.vercel.app/api?type=waving&color=d9d9d9&height=120&section=header"/>
 
-# MiCursada
+# AprobAR
 
 <div>
 Aplicación móvil académica para visualizar calificaciones, vencimientos, cronograma y presentismo.
