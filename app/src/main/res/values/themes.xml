@@ -1,0 +1,16 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- General -->
+    <style name="Base.Theme.Micursada" parent="Theme.Material3.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/blue</item>
+        <item name="colorOnPrimary">@color/white</item>
+        <item name="android:statusBarColor">@color/blue</item>
+        <item name="android:windowLightStatusBar">false</item><!-- false = iconos claros -->
+    </style>
+
+    <style name="Theme.Micursada" parent="Base.Theme.Micursada" />
+
+    <!-- Menu -->
+    <style name="navigation" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">20sp</item>
+    </style>
+</resources>

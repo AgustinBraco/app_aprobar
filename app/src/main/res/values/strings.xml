@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Campus Virtual</string>
+    <string name="welcome">Bienvenido a MiCursada</string>
+    <string name="logo">Imagen del logo de la institución</string>
+    <string name="label_dni">DNI</string>
+    <string name="value_dni">40123456</string>
+    <string name="label_password">Contraseña</string>
+    <string name="value_password">**********</string>
+    <string name="button_login">Ingresar</string>
+    <string name="menu_home">Inicio</string>
+    <string name="menu_qualifications">Calificaciones</string>
+    <string name="menu_expirations">Vencimientos</string>
+    <string name="menu_schedule">Cronograma</string>
+    <string name="menu_presenteeism">Presentismo</string>
+    <string name="menu_about">Acerca de</string>
+    <string name="menu_logout">Cerrar sesión</string>
+    <string name="menu_close">Cerrar menú</string>
+    <string name="drawer_open">Abrir menú</string>
+    <string name="drawer_close">Cerrar menú</string>
+</resources>
