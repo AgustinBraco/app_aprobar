@@ -1,18 +1,35 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white"
-    android:layout_gravity="center"
+    android:orientation="vertical"
+    android:background="@color/lightblue"
+    android:padding="12dp"
     tools:context=".HomeFragment">
 
-    <TextView
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:textColor="@color/black"
-        android:textSize="24sp"
-        android:text="INICIO" />
+        android:orientation="vertical"
+        android:padding="6dp">
 
-</FrameLayout>
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/blue"
+            android:background="@drawable/style_rounded"
+            android:textStyle="bold"
+            android:textSize="28sp"
+            android:textColor="@color/white"
+            android:textAlignment="center"
+            android:text="Juan Perez"
+            android:padding="4dp"
+            android:layout_marginBottom="10dp"/>
+
+        <include layout="@layout/item_grades" />
+
+    </LinearLayout>
+
+</ScrollView>

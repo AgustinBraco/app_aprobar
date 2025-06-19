@@ -8,7 +8,8 @@
     <string name="value_password">**********</string>
     <string name="button_login">Ingresar</string>
     <string name="menu_home">Inicio</string>
-    <string name="menu_qualifications">Calificaciones</string>
+    <string name="menu_persona">Persona</string>
+    <string name="menu_grades">Calificaciones</string>
     <string name="menu_expirations">Vencimientos</string>
     <string name="menu_schedule">Cronograma</string>
     <string name="menu_presenteeism">Presentismo</string>
@@ -17,4 +18,13 @@
     <string name="menu_close">Cerrar menú</string>
     <string name="drawer_open">Abrir menú</string>
     <string name="drawer_close">Cerrar menú</string>
+    <string name="grades_type">Tipo:</string>
+    <string name="grades_grade">Calificación:</string>
+    <string name="grades_date">Fecha:</string>
+    <string name="about_app_title">App académica</string>
+    <string name="about_app_text">Versión 1.0</string>
+    <string name="about_policies_title">Política de uso:</string>
+    <string name="about_policies_text">Esta aplicación fue desarrollada con fines académicos, con el objetivo de brindar a los estudiantes una herramienta que les permita visualizar de forma clara y ordenada su desempeño académico, asistencia y cronograma de actividades.\nLos datos presentados en la aplicación son simulados y no están conectados a un sistema real de gestión institucional. Por lo tanto, no deben ser tomados como información oficial.</string>
+    <string name="about_devs_title">Desarrollado por:</string>
+    <string name="about_devs_text">• Ayelén Corrillo\n• Agustin Braco\n• Santiago Vanotti\n• Mariano Abizanda\n• Elisa Mele</string>
 </resources>

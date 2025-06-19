@@ -51,7 +51,7 @@ class HomeActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> replaceFragment(HomeFragment())
-                R.id.menu_qualifications -> replaceFragment(QualificationsFragment())
+                R.id.menu_grades -> replaceFragment(GradesFragment())
                 R.id.menu_expirations -> replaceFragment(ExpirationsFragment())
                 R.id.menu_schedule -> replaceFragment(ScheduleFragment())
                 R.id.menu_presenteeism -> replaceFragment(PresenteeismFragment())
