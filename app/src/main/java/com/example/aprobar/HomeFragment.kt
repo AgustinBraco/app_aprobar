@@ -46,5 +46,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
             expirationsDays,
             view.context
         )
+
+
+        val date = getPastDate(5) // "15/06/2025"
+        val day = getDayName(date) // "domingo"
+        println(date)
+        println(day)
     }
 }
