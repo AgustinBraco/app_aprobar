@@ -32,6 +32,9 @@
         <!-- Última nota -->
         <include layout="@layout/item_grades" />
 
+        <!-- Próximo vencimiento -->
+        <include layout="@layout/item_expirations" />
+
     </LinearLayout>
 
 </ScrollView>

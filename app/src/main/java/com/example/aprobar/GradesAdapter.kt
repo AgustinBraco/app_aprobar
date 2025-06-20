@@ -10,11 +10,11 @@ class GradesAdapter(private val grades: List<GradesData>) : RecyclerView.Adapter
 
     // Definir elementos a usar en cada item
     class GradesViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
-        val tvSubject: TextView = itemView.findViewById(R.id.grades_subject)
-        val tvStatus: TextView = itemView.findViewById(R.id.grades_status)
-        val tvType: TextView = itemView.findViewById(R.id.grades_type)
-        val tvGrade: TextView = itemView.findViewById(R.id.grades_grade)
-        val tvDate: TextView = itemView.findViewById(R.id.grades_date)
+        val gradesSubject: TextView = itemView.findViewById(R.id.grades_subject)
+        val gradesStatus: TextView = itemView.findViewById(R.id.grades_status)
+        val gradesType: TextView = itemView.findViewById(R.id.grades_type)
+        val gradesGrade: TextView = itemView.findViewById(R.id.grades_grade)
+        val gradesDate: TextView = itemView.findViewById(R.id.grades_date)
     }
 
     // Crear e inflar item
@@ -26,14 +26,14 @@ class GradesAdapter(private val grades: List<GradesData>) : RecyclerView.Adapter
     // Asignar datos a cada ítem
     override fun onBindViewHolder(holder: GradesViewHolder, position: Int) {
         val grade = grades[position]
-        holder.tvSubject.text = grade.subject
-        holder.tvType.text = grade.type
-        holder.tvGrade.text = grade.grade
-        holder.tvDate.text = grade.date
+        holder.gradesSubject.text = grade.subject
+        holder.gradesType.text = grade.type
+        holder.gradesGrade.text = grade.grade
+        holder.gradesDate.text = grade.date
 
         setStatus(
-            holder.tvGrade.text.toString(),
-            holder.tvStatus,
+            holder.gradesGrade.text.toString(),
+            holder.gradesStatus,
             holder.itemView.context
         )
     }
