@@ -40,6 +40,21 @@ fun setStatus(
 }
 
 // VENCIMIENTOS
+// Generar fechas en base a la fecha actual
+@RequiresApi(Build.VERSION_CODES.O)
+fun getPastDate(days: Long): String {
+    val date = LocalDate.now()
+    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+    return date.minusDays(days).format(formatter)
+}
+
+@RequiresApi(Build.VERSION_CODES.O)
+fun getFutureDate(days: Long): String {
+    val date = LocalDate.now()
+    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+    return date.plusDays(days).format(formatter)
+}
+
 // Definir texto y fondo de los días en base a la fecha actual
 @RequiresApi(Build.VERSION_CODES.O)
 @SuppressLint("SetTextI18n")
@@ -50,9 +65,9 @@ fun setDays(
 ) {
 
     // Formatear fecha y calcular días restantes
+    val today = LocalDate.now()
     val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
     val expirationDate = LocalDate.parse(date, formatter)
-    val today = LocalDate.now()
     val days = ChronoUnit.DAYS.between(today, expirationDate)
     view.text = "$days días"
 

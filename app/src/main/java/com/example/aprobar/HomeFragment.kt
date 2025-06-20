@@ -6,21 +6,15 @@ import android.view.View
 import android.widget.TextView
 import androidx.annotation.RequiresApi
 import androidx.fragment.app.Fragment
-import java.time.LocalDate
-import java.time.format.DateTimeFormatter
 
 class HomeFragment : Fragment(R.layout.fragment_home) {
     @RequiresApi(Build.VERSION_CODES.O)
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        // Generador de fecha en base a fecha actual
-        val date = LocalDate.now()
-        val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-
         // Mockear datos
-        val lastGrade = GradesData("Base de Datos", "Parcial", "8.5", date.minusDays(1).format(formatter))
-        val nextExpiration = ExpirationsData("Matemáticas", "Parcial", date.plusDays(0).format(formatter))
+        val lastGrade = GradesData("Base de Datos", "Parcial", "8.5", getPastDate(1))
+        val nextExpiration = ExpirationsData("Matemáticas", "Parcial", getFutureDate(0))
 
         // Obtener elementos
         // Calificaciones
