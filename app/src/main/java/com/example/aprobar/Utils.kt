@@ -2,16 +2,22 @@ package com.example.aprobar
 
 import android.annotation.SuppressLint
 import android.content.Context
-import android.os.Build
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.core.content.ContextCompat
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
 
+// GLOBAL
+val today: LocalDate = LocalDate.now()
+val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+
+// Obtener fecha pasada/futura en base a la fecha actual
+fun getPastDate(days: Long): String = today.minusDays(days).format(formatter)
+fun getFutureDate(days: Long): String = today.plusDays(days).format(formatter)
+
 // CALIFICACIONES
-// Definir texto y fondo del estado en base a la nota obtenida
+// Definir texto y estilo en base a la nota obtenida
 @SuppressLint("SetTextI18n")
 fun setStatus(
     gradeText: String,
@@ -40,23 +46,7 @@ fun setStatus(
 }
 
 // VENCIMIENTOS
-// Generar fechas en base a la fecha actual
-@RequiresApi(Build.VERSION_CODES.O)
-fun getPastDate(days: Long): String {
-    val date = LocalDate.now()
-    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-    return date.minusDays(days).format(formatter)
-}
-
-@RequiresApi(Build.VERSION_CODES.O)
-fun getFutureDate(days: Long): String {
-    val date = LocalDate.now()
-    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
-    return date.plusDays(days).format(formatter)
-}
-
-// Definir texto y fondo de los días en base a la fecha actual
-@RequiresApi(Build.VERSION_CODES.O)
+// Definir texto y estilo en base a la fecha actual
 @SuppressLint("SetTextI18n")
 fun setDays(
     date: String,
@@ -65,8 +55,6 @@ fun setDays(
 ) {
 
     // Formatear fecha y calcular días restantes
-    val today = LocalDate.now()
-    val formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
     val expirationDate = LocalDate.parse(date, formatter)
     val days = ChronoUnit.DAYS.between(today, expirationDate)
     view.text = "$days días"

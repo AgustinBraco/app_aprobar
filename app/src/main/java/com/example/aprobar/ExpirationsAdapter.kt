@@ -1,11 +1,9 @@
 package com.example.aprobar
 
-import android.os.Build
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.TextView
-import androidx.annotation.RequiresApi
 import androidx.recyclerview.widget.RecyclerView
 
 class ExpirationsAdapter(private val expirations: List<ExpirationsData>) : RecyclerView.Adapter<ExpirationsAdapter.ExpirationsViewHolder>() {
@@ -25,7 +23,6 @@ class ExpirationsAdapter(private val expirations: List<ExpirationsData>) : Recyc
     }
 
     // Asignar datos a cada ítem
-    @RequiresApi(Build.VERSION_CODES.O)
     override fun onBindViewHolder(holder: ExpirationsViewHolder, position: Int) {
         val expiration = expirations[position]
         holder.expirationsSubject.text = expiration.subject
