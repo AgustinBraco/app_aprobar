@@ -11,16 +11,18 @@ class ScheduleFragment : Fragment(R.layout.fragment_schedule) {
         super.onViewCreated(view, savedInstanceState)
 
         // Mockear datos
+        val nextDays = getNextDays(6)
+
         val schedule = listOf(
-            ScheduleData(getDayName(getFutureDate(0)), getFutureDate(0), "PPII", "18:00 a 22:00", "meet.google.com/ppii"),
-            ScheduleData(getDayName(getFutureDate(1)), getFutureDate(1), "POO", "18:00 a 22:00", "meet.google.com/poo"),
-            ScheduleData(getDayName(getFutureDate(2)), getFutureDate(2), "Testing", "18:00 a 20:00", "meet.google.com/testing"),
-            ScheduleData(getDayName(getFutureDate(2)), getFutureDate(2), "Base de Datos", "20:00 a 22:00", "meet.google.com/bbdd"),
-            ScheduleData(getDayName(getFutureDate(3)), getFutureDate(3), "Matemáticas", "18:00 a 22:00", "meet.google.com/matematicas"),
-            ScheduleData(getDayName(getFutureDate(4)), getFutureDate(4), "Lógica", "18:00 a 20:00", "meet.google.com/logica"),
-            ScheduleData(getDayName(getFutureDate(4)), getFutureDate(4), "Inglés", "20:00 a 22:00", "meet.google.com/ingles"),
-            ScheduleData(getDayName(getFutureDate(5)), getFutureDate(5), "Estadística", "18:00 a 22:00", "meet.google.com/estadistica"),
-            ScheduleData(getDayName(getFutureDate(6)), getFutureDate(6), "Backend", "18:00 a 22:00", "meet.google.com/backend")
+            ScheduleData(getDayName(nextDays[0]), nextDays[0], "PPII", "18:00 a 22:00", "meet.google.com/ppii"),
+            ScheduleData(getDayName(nextDays[1]), nextDays[1], "POO", "18:00 a 22:00", "meet.google.com/poo"),
+            ScheduleData(getDayName(nextDays[2]), nextDays[2], "Testing", "18:00 a 20:00", "meet.google.com/testing"),
+            ScheduleData(getDayName(nextDays[2]), nextDays[2], "Base de Datos", "20:00 a 22:00", "meet.google.com/bbdd"),
+            ScheduleData(getDayName(nextDays[3]), nextDays[3], "Matemáticas", "18:00 a 22:00", "meet.google.com/matematicas"),
+            ScheduleData(getDayName(nextDays[4]), nextDays[4], "Lógica", "18:00 a 20:00", "meet.google.com/logica"),
+            ScheduleData(getDayName(nextDays[4]), nextDays[4], "Inglés", "20:00 a 22:00", "meet.google.com/ingles"),
+            ScheduleData(getDayName(nextDays[5]), nextDays[5], "Estadística", "18:00 a 22:00", "meet.google.com/estadistica"),
+            ScheduleData(getDayName(nextDays[6]), nextDays[6], "Backend", "18:00 a 22:00", "meet.google.com/backend")
         )
 
         // Configurar para mostrar lista de items

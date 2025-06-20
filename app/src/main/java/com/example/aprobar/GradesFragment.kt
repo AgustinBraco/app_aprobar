@@ -11,14 +11,16 @@ class GradesFragment : Fragment(R.layout.fragment_grades) {
         super.onViewCreated(view, savedInstanceState)
 
         // Mockear datos
+        val previousDays = getPreviousDays(20)
+
         val grades = listOf(
-            GradesData("Base de Datos", "Parcial", "8.5", getPastDate(1)),
-            GradesData("POO","Trabajo Práctico", "6", getPastDate(2)),
-            GradesData("PPI", "Parcial", "4.5", getPastDate(5)),
-            GradesData("Testing", "Parcial", "5.5", getPastDate(9)),
-            GradesData("Matemáticas","Final", "2", getPastDate(11)),
-            GradesData("Lógica","Trabajo Práctico", "7", getPastDate(18)),
-            GradesData("TICS","Trabajo Práctico", "6.5", getPastDate(20))
+            GradesData("Base de Datos", "Parcial", "8.5", previousDays[1]),
+            GradesData("POO","Trabajo Práctico", "6", previousDays[2]),
+            GradesData("PPI", "Parcial", "4.5", previousDays[5]),
+            GradesData("Testing", "Parcial", "5.5", previousDays[9]),
+            GradesData("Matemáticas","Final", "2", previousDays[11]),
+            GradesData("Lógica","Trabajo Práctico", "7", previousDays[18]),
+            GradesData("TICS","Trabajo Práctico", "6.5", previousDays[20])
         )
 
         // Configurar para mostrar lista de items

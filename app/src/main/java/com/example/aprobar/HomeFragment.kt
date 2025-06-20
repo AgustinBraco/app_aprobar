@@ -10,9 +10,12 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         super.onViewCreated(view, savedInstanceState)
 
         // Mockear datos
-        val lastGrade = GradesData("Base de Datos", "Parcial", "8.5", getPastDate(1))
-        val nextExpiration = ExpirationsData("Matemáticas", "Parcial", getFutureDate(0))
-        val nextSchedule = ScheduleData(getDayName(getFutureDate(1)), getFutureDate(1), "PPII", "18:00 a 22:00", "meet.google.com/ppii")
+        val previousDays = getPreviousDays(1)
+        val nextDays = getNextDays(1)
+
+        val lastGrade = GradesData("Base de Datos", "Parcial", "8.5", previousDays[1])
+        val nextExpiration = ExpirationsData("Matemáticas", "Parcial", nextDays[0])
+        val nextSchedule = ScheduleData(getDayName(nextDays[1]), nextDays[1], "PPII", "18:00 a 22:00", "meet.google.com/ppii")
 
         // Obtener elementos
         // Calificaciones

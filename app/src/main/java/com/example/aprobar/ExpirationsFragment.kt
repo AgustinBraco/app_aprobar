@@ -11,14 +11,17 @@ class ExpirationsFragment : Fragment(R.layout.fragment_expirations) {
         super.onViewCreated(view, savedInstanceState)
 
         // Mockear datos
+        val previousDays = getPreviousDays(7)
+        val nextDays = getNextDays(20)
+
         val expirations = listOf(
-            ExpirationsData("Testing", "Parcial", getFutureDate(0)),
-            ExpirationsData("Matemáticas", "Parcial", getFutureDate(1)),
-            ExpirationsData("Base de Datos", "Trabajo Práctico",getFutureDate(6)),
-            ExpirationsData("POO", "Parcial", getFutureDate(12)),
-            ExpirationsData("PPII", "Final", getFutureDate(20)),
-            ExpirationsData("Lógica", "Trabajo Práctico", getPastDate(3)),
-            ExpirationsData("Inglés", "Final", getPastDate(7))
+            ExpirationsData("Testing", "Parcial", nextDays[0]),
+            ExpirationsData("Matemáticas", "Parcial", nextDays[1]),
+            ExpirationsData("Base de Datos", "Trabajo Práctico", nextDays[6]),
+            ExpirationsData("POO", "Parcial", nextDays[12]),
+            ExpirationsData("PPII", "Final", nextDays[20]),
+            ExpirationsData("Lógica", "Trabajo Práctico", previousDays[3]),
+            ExpirationsData("Inglés", "Final", previousDays[7])
         )
 
         // Configurar para mostrar lista de items

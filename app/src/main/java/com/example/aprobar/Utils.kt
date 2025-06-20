@@ -16,9 +16,35 @@ val today: LocalDate = LocalDate.now()
 val dateFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
 val dayFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("EEEE", locale)
 
-// Obtener fecha pasada/futura en base a la fecha actual
-fun getPastDate(days: Long): String = today.minusDays(days).format(dateFormatter)
-fun getFutureDate(days: Long): String = today.plusDays(days).format(dateFormatter)
+// Obtener una lista de días hábiles siguientes
+fun getNextDays(count: Int) : List<String> {
+    val nextDays = mutableListOf<String>()
+    var currentDate = today
+
+    while (nextDays.size < count + 1) {
+        val dayOfWeek = currentDate.dayOfWeek.value
+        if(dayOfWeek in 1 .. 5) {
+            nextDays.add(currentDate.format(dateFormatter))
+        }
+        currentDate = currentDate.plusDays(1)
+    }
+    return nextDays
+}
+
+// Obtener una lista de los días hábiles pasados
+fun getPreviousDays(count: Int): List<String> {
+    val previousDays = mutableListOf<String>()
+    var currentDate = today
+
+    while (previousDays.size < count + 1) {
+        val dayOfWeek = currentDate.dayOfWeek.value
+        if (dayOfWeek in 1..5) {
+            previousDays.add(currentDate.format(dateFormatter))
+        }
+        currentDate = currentDate.minusDays(1)
+    }
+    return previousDays
+}
 
 // Obtener nombre del día
 fun getDayName(dateString: String): String {
