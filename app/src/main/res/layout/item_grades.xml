@@ -15,9 +15,8 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:padding="6dp">
+        android:paddingVertical="6dp">
 
-        <!-- Nombre -->
         <TextView
             android:id="@+id/grades_subject"
             android:layout_width="0dp"
@@ -28,7 +27,6 @@
             android:textSize="22sp"
             android:text="" />
 
-        <!-- Estado -->
         <TextView
             android:id="@+id/grades_status"
             android:layout_width="wrap_content"

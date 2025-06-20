@@ -35,6 +35,9 @@
         <!-- Próximo vencimiento -->
         <include layout="@layout/item_expirations" />
 
+        <!-- Próximo curso -->
+        <include layout="@layout/item_schedule" />
+
     </LinearLayout>
 
 </ScrollView>

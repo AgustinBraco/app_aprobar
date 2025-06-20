@@ -24,6 +24,9 @@
     <string name="grades_date">Fecha:</string>
     <string name="expirations_type">Tipo:</string>
     <string name="expirations_date">Fecha:</string>
+    <string name="schedule_subject">Materia:</string>
+    <string name="schedule_hour">Hora:</string>
+    <string name="schedule_link">Link:</string>
     <string name="about_app_title">App académica</string>
     <string name="about_app_text">Versión 1.0</string>
     <string name="about_policies_title">Políticas de uso:</string>

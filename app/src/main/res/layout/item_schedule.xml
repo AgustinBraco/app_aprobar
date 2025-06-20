@@ -9,7 +9,7 @@
     android:padding="12dp"
     android:layout_margin="10dp">
 
-    <!-- Materia -->
+    <!-- Día -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -18,7 +18,7 @@
         android:paddingVertical="6dp">
 
         <TextView
-            android:id="@+id/expirations_subject"
+            android:id="@+id/schedule_day"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
@@ -28,21 +28,18 @@
             android:text="" />
 
         <TextView
-            android:id="@+id/expirations_days"
+            android:id="@+id/schedule_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/style_rounded"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp"
-            android:layout_marginStart="12dp"
+            android:layout_marginStart="10dp"
             android:textStyle="bold"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:textSize="18sp"
             android:text=""/>
 
     </LinearLayout>
 
-    <!-- Tipo -->
+    <!-- Materia -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -55,10 +52,10 @@
             android:layout_weight="1"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:text="@string/expirations_type" />
+            android:text="@string/schedule_subject" />
 
         <TextView
-            android:id="@+id/expirations_type"
+            android:id="@+id/schedule_subject"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
@@ -67,7 +64,7 @@
 
     </LinearLayout>
 
-    <!-- Fecha -->
+    <!-- Hora -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -80,10 +77,35 @@
             android:layout_weight="1"
             android:textColor="@color/black"
             android:textSize="18sp"
-            android:text="@string/expirations_date" />
+            android:text="@string/schedule_hour" />
 
         <TextView
-            android:id="@+id/expirations_date"
+            android:id="@+id/schedule_hour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:text="" />
+
+    </LinearLayout>
+
+    <!-- Link -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="4dp">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/black"
+            android:textSize="18sp"
+            android:text="@string/schedule_link" />
+
+        <TextView
+            android:id="@+id/schedule_link"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/black"
