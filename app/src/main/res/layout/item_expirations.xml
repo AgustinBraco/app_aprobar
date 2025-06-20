@@ -7,7 +7,8 @@
     android:backgroundTint="@color/white"
     android:background="@drawable/style_rounded"
     android:padding="12dp"
-    android:layout_margin="10dp">
+    android:layout_marginTop="4dp"
+    android:layout_marginBottom="12dp">
 
     <!-- Materia -->
     <LinearLayout
@@ -15,7 +16,7 @@
         android:layout_height="wrap_content"
         android:orientation="horizontal"
         android:gravity="center"
-        android:paddingVertical="6dp">
+        android:paddingVertical="4dp">
 
         <TextView
             android:id="@+id/expirations_subject"

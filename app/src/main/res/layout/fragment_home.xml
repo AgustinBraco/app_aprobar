@@ -27,15 +27,39 @@
             android:textAlignment="center"
             android:text="@string/home_name"
             android:padding="4dp"
-            android:layout_marginBottom="10dp"/>
+            android:layout_marginBottom="12dp"/>
 
         <!-- Última nota -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:text="@string/home_grade"/>
+
         <include layout="@layout/item_grades" />
 
         <!-- Próximo vencimiento -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:text="@string/home_expiration"/>
+
         <include layout="@layout/item_expirations" />
 
         <!-- Próximo curso -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="20sp"
+            android:textColor="@color/blue"
+            android:text="@string/home_schedule"/>
+
         <include layout="@layout/item_schedule" />
 
     </LinearLayout>

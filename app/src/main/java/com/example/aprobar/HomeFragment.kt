@@ -1,6 +1,8 @@
 package com.example.aprobar
 
 import android.os.Bundle
+import android.text.method.LinkMovementMethod
+import android.text.util.Linkify
 import android.view.View
 import android.widget.TextView
 import androidx.fragment.app.Fragment
@@ -62,5 +64,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         scheduleSubject.text = nextSchedule.subject
         scheduleHour.text = nextSchedule.hour
         scheduleLink.text = nextSchedule.link
+        scheduleLink.autoLinkMask = Linkify.WEB_URLS
+        scheduleLink.movementMethod = LinkMovementMethod.getInstance()
     }
 }

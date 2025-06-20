@@ -17,6 +17,9 @@
     <string name="menu_logout">Cerrar sesión</string>
     <string name="menu_close">Cerrar menú</string>
     <string name="home_name">Juan Perez</string>
+    <string name="home_grade">Última calificación</string>
+    <string name="home_expiration">Próximo vencimiento</string>
+    <string name="home_schedule">Próxima clase</string>
     <string name="drawer_open">Abrir menú</string>
     <string name="drawer_close">Cerrar menú</string>
     <string name="grades_type">Tipo:</string>

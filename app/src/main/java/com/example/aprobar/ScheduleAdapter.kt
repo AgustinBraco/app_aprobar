@@ -1,5 +1,7 @@
 package com.example.aprobar
 
+import android.text.method.LinkMovementMethod
+import android.text.util.Linkify
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -31,6 +33,8 @@ class ScheduleAdapter(private val schedule: List<ScheduleData>) : RecyclerView.A
         holder.scheduleSubject.text = course.subject
         holder.scheduleHour.text = course.hour
         holder.scheduleLink.text = course.link
+        holder.scheduleLink.autoLinkMask = Linkify.WEB_URLS
+        holder.scheduleLink.movementMethod = LinkMovementMethod.getInstance()
     }
 
     // Definir cantidad de items
