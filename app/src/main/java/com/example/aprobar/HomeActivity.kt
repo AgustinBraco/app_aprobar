@@ -19,17 +19,15 @@ class HomeActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
 
-        // Código
-        val homeLayout = findViewById<ConstraintLayout>(R.id.home)
-
         // Aplicar margen superior dinámico
+        val homeLayout = findViewById<ConstraintLayout>(R.id.home)
         ViewCompat.setOnApplyWindowInsetsListener(homeLayout) { view, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.statusBars())
             view.updatePadding(top = insets.top)
             windowInsets
         }
 
-        // Sección por defecto
+        // Sección Home por defecto
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragments, HomeFragment())
             .commit()
@@ -40,14 +38,13 @@ class HomeActivity : AppCompatActivity() {
         val toolbar = findViewById<Toolbar>(R.id.toolbar)
         setSupportActionBar(toolbar)
 
-        // Alternar estado
+        // Alternar estado del menú
         val toggle = ActionBarDrawerToggle(this, drawerLayout, toolbar,
             R.string.drawer_open, R.string.drawer_close)
-
         drawerLayout.addDrawerListener(toggle)
         toggle.syncState()
 
-        // Acciones
+        // Acciones del menú
         navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> replaceFragment(HomeFragment())
@@ -66,7 +63,7 @@ class HomeActivity : AppCompatActivity() {
         }
     }
 
-    // Renderizar sección
+    // Renderizar sección seleccionada
     private fun replaceFragment(fragment: Fragment) {
         supportFragmentManager.beginTransaction()
             .replace(R.id.fragments, fragment)

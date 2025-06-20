@@ -15,6 +15,7 @@
         android:orientation="vertical"
         android:padding="6dp">
 
+        <!-- Estudiante -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -24,10 +25,11 @@
             android:textSize="28sp"
             android:textColor="@color/white"
             android:textAlignment="center"
-            android:text="Juan Perez"
+            android:text="@string/home_name"
             android:padding="4dp"
             android:layout_marginBottom="10dp"/>
 
+        <!-- Última nota -->
         <include layout="@layout/item_grades" />
 
     </LinearLayout>

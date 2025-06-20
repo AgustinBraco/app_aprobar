@@ -14,18 +14,16 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        // Código
-        val mainLayout = findViewById<ConstraintLayout>(R.id.main)
-        val btLogin = findViewById<MaterialButton>(R.id.btLogin)
-
         // Aplicar margen superior dinámico
+        val mainLayout = findViewById<ConstraintLayout>(R.id.main)
         ViewCompat.setOnApplyWindowInsetsListener(mainLayout) { view, windowInsets ->
             val insets = windowInsets.getInsets(WindowInsetsCompat.Type.statusBars())
             view.updatePadding(top = insets.top)
             windowInsets
         }
 
-        // Detectar click en botón
+        // Cambiar activity al ingresar
+        val btLogin = findViewById<MaterialButton>(R.id.btLogin)
         btLogin.setOnClickListener {
             val homeIntent = Intent(this, HomeActivity::class.java)
             startActivity(homeIntent)

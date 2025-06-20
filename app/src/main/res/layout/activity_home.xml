@@ -8,7 +8,6 @@
     android:background="@color/lightblue"
     android:fitsSystemWindows="true">
 
-    <!-- Home -->
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/home"
         android:layout_width="match_parent"

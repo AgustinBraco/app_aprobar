@@ -11,6 +11,7 @@ class GradesFragment : Fragment(R.layout.fragment_grades) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // Crear lista de items
         val grades = listOf(
             GradesData("Adm. de Base de Datos", "Parcial", "8.5", "01/07/2025"),
             GradesData("POO","Trabajo Práctico", "6", "25/06/2025"),
@@ -20,6 +21,7 @@ class GradesFragment : Fragment(R.layout.fragment_grades) {
             GradesData("TICS","Trabajo Práctico", "6.5", "09/06/2025")
         )
 
+        // Configurar para mostrar lista de items
         val recyclerView = view.findViewById<RecyclerView>(R.id.recyclerView)
         recyclerView.layoutManager = LinearLayoutManager(requireContext())
         recyclerView.adapter = GradesAdapter(grades)
