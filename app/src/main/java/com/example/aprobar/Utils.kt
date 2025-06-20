@@ -13,16 +13,16 @@ import java.util.Locale
 @SuppressLint("ConstantLocale")
 val locale: Locale = Locale("es", "AR")
 val today: LocalDate = LocalDate.now()
-val formatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+val dateFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
+val dayFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("EEEE", locale)
 
 // Obtener fecha pasada/futura en base a la fecha actual
-fun getPastDate(days: Long): String = today.minusDays(days).format(formatter)
-fun getFutureDate(days: Long): String = today.plusDays(days).format(formatter)
+fun getPastDate(days: Long): String = today.minusDays(days).format(dateFormatter)
+fun getFutureDate(days: Long): String = today.plusDays(days).format(dateFormatter)
 
 // Obtener nombre del día
 fun getDayName(dateString: String): String {
-    val date = LocalDate.parse(dateString, formatter)
-    val dayFormatter = DateTimeFormatter.ofPattern("EEEE", locale)
+    val date = LocalDate.parse(dateString, dateFormatter)
     val dayName = date.format(dayFormatter).replaceFirstChar { it.uppercase(locale) }
     return dayName
 }
@@ -66,7 +66,7 @@ fun setDays(
 ) {
 
     // Formatear fecha y calcular días restantes
-    val expirationDate = LocalDate.parse(date, formatter)
+    val expirationDate = LocalDate.parse(date, dateFormatter)
     val days = ChronoUnit.DAYS.between(today, expirationDate)
     view.text = "$days días"
 
