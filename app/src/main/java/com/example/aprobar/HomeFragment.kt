@@ -5,13 +5,35 @@ import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
 import android.view.View
 import android.widget.TextView
+import androidx.lifecycle.ViewModelProvider
 import androidx.fragment.app.Fragment
 
+
 class HomeFragment : Fragment(R.layout.fragment_home) {
+    private lateinit var sharedViewModel: SharedViewModel
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
         // Mockear datos
+        sharedViewModel = ViewModelProvider(requireActivity())[SharedViewModel::class.java]
+        sharedViewModel.loadPresenteeism()
+        // Obtener el TextView
+        val presenteeismPresent: TextView = view.findViewById(R.id.presenteeism_present)
+        val presenteeismAbsent: TextView = view.findViewById(R.id.presenteeism_absent)
+        val presenteeismPercentage: TextView = view.findViewById(R.id.presenteeism_percentage)
+
+        // Observar los datos del ViewModel y sumar la cantidad de "present"
+        sharedViewModel.presenteeismShared.observe(viewLifecycleOwner) { subjects ->
+            val presents = subjects.sumOf { it.present }
+            val absents = subjects.sumOf { it.absent }
+            presenteeismPresent.text = "$presents"
+            presenteeismAbsent.text = "$absents"
+            val presenteeism = calculatePresenteeism(presents, absents)
+            presenteeismPercentage.text = "$presenteeism%"
+        }
+
+
         val previousDays = getPreviousDays(1)
         val nextDays = getNextDays(1)
 
@@ -37,6 +59,9 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         val scheduleSubject: TextView = view.findViewById(R.id.schedule_subject)
         val scheduleHour: TextView = view.findViewById(R.id.schedule_hour)
         val scheduleLink: TextView = view.findViewById(R.id.schedule_link)
+        // Presentismo
+        val presenteeismSubject: TextView = view.findViewById(R.id.presenteeism_subject)
+
 
         // Asignar datos
         // Calificaciones
@@ -66,5 +91,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         scheduleLink.text = nextSchedule.link
         scheduleLink.autoLinkMask = Linkify.WEB_URLS
         scheduleLink.movementMethod = LinkMovementMethod.getInstance()
+        // Presentismo
+        presenteeismSubject.text = "Asistencia total"
     }
+
 }

@@ -124,3 +124,16 @@ fun setDays(
         }
     }
 }
+
+//PRESENTISMO
+//Calcular porcentaje de presentismo
+
+fun calculatePresenteeism(present: Int, absent: Int): Int {
+    if (present == 0) return 0
+    if (absent == 0) return 100
+
+    val total = present + absent
+    val presenteeism = present * 100 / total
+    return presenteeism
+
+}
