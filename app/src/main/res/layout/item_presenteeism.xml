@@ -15,7 +15,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:gravity="center"
+        android:gravity="center_vertical"
         android:paddingVertical="4dp">
 
         <TextView
@@ -23,24 +23,20 @@
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
+            android:text=""
             android:textColor="@color/black"
             android:textStyle="bold"
-            android:textSize="22sp"
-            android:text="PPII" />
+            android:textSize="22sp" />
 
         <TextView
             android:id="@+id/presenteeism_percentage"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:background="@drawable/style_rounded"
-            android:paddingVertical="2dp"
-            android:paddingHorizontal="10dp"
-            android:layout_marginStart="12dp"
+            android:text=""
+            android:textColor="@color/black"
             android:textStyle="bold"
-            android:textColor="@color/white"
-            android:textSize="18sp"
-            android:text="80%"/>
-
+            android:textSize="24sp"
+            android:layout_marginStart="12dp"/>
     </LinearLayout>
 
     <!-- Asistencia -->
@@ -48,43 +44,67 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:padding="4dp">
+        android:weightSum="2"
+        android:paddingTop="8dp"
+        android:paddingBottom="4dp">
 
         <!-- Presente -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:background="@drawable/rounded_bg_green"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginEnd="12dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Presente"/>
+                android:text="@string/presenteeism_present"
+                android:textColor="@color/lightgreen"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/presenteeism_present"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="8"/>
+                android:text=""
+                android:textColor="@color/lightgreen"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 
         <!-- Ausente -->
         <LinearLayout
-            android:layout_width="wrap_content"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
+            android:layout_weight="1"
             android:orientation="vertical"
-            android:padding="8dp">
+            android:background="@drawable/rounded_bg_red"
+            android:padding="8dp"
+            android:gravity="center"
+            android:layout_marginStart="12dp">
 
             <TextView
-                android:layout_width="match_parent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Ausente"/>
+                android:text="@string/presenteeism_absent"
+                android:textColor="@color/red"
+                android:textSize="16sp"
+                android:textStyle="bold"/>
 
             <TextView
-                android:layout_width="match_parent"
+                android:id="@+id/presenteeism_absent"
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="2"/>
+                android:text=""
+                android:textColor="@color/red"
+                android:textSize="22sp"
+                android:textStyle="bold"/>
 
         </LinearLayout>
 

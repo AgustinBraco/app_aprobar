@@ -23,6 +23,8 @@
     <string name="home_presenteeism">Asistencia</string>
     <string name="drawer_open">Abrir menú</string>
     <string name="drawer_close">Cerrar menú</string>
+    <string name="presenteeism_present">Presentes</string>
+    <string name="presenteeism_absent">Ausentes</string>
     <string name="grades_title">Calificaciones</string>
     <string name="grades_type">Tipo:</string>
     <string name="grades_grade">Calificación:</string>
@@ -38,7 +40,13 @@
     <string name="about_app_title">App académica</string>
     <string name="about_app_text">Versión 1.0</string>
     <string name="about_policies_title">Políticas de uso:</string>
-    <string name="about_policies_text">Esta aplicación fue desarrollada con fines académicos, con el objetivo de brindar a los estudiantes una herramienta que les permita visualizar de forma clara y ordenada su desempeño académico, asistencia y cronograma de actividades.\nLos datos presentados en la aplicación son simulados y no están conectados a un sistema real de gestión institucional. Por lo tanto, no deben ser tomados como información oficial.</string>
+    <string name="about_policies_text">Esta aplicación ha sido desarrollada exclusivamente con fines académicos y educativos, con la intención de ofrecer a los estudiantes una herramienta práctica y accesible que facilite la visualización clara
+        y organizada de diferentes aspectos relacionados con su vida académica.
+        \nEntre las funcionalidades principales, la aplicación permite consultar de manera sencilla el desempeño académico, el registro de asistencia, y el cronograma de actividades programadas.
+        \nEs importante destacar que todos los datos que se muestran dentro de la aplicación son simulados y se generan con fines ilustrativos únicamente. La aplicación no está conectada ni sincronizada con
+        ningún sistema real de gestión institucional ni bases de datos oficiales, por lo que la información presentada no debe ser considerada como datos oficiales ni utilizados para toma de decisiones administrativas o académicas formales.
+        \nEl propósito fundamental de esta aplicación es servir como un prototipo o modelo de referencia para comprender y practicar conceptos de desarrollo de software en el ámbito académico, brindando un espacio seguro para el aprendizaje
+        y la experimentación sin comprometer la integridad ni confidencialidad de datos reales de estudiantes o instituciones educativas.</string>
     <string name="about_devs_title">Desarrollado por:</string>
     <string name="about_devs_text">• Ayelén Corrillo\n• Agustin Braco\n• Santiago Vanotti\n• Mariano Abizanda\n• Elisa Mele</string>
 </resources>
