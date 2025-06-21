@@ -24,16 +24,12 @@ class ExpirationsAdapter(private val expirations: List<ExpirationsData>) : Recyc
 
     // Asignar datos a cada ítem
     override fun onBindViewHolder(holder: ExpirationsViewHolder, position: Int) {
-        val expiration = expirations[position]
-        holder.expirationsSubject.text = expiration.subject
-        holder.expirationsType.text = expiration.type
-        holder.expirationsDate.text = expiration.date
+        val item = expirations[position]
 
-        setDays(
-            holder.expirationsDate.text.toString(),
-            holder.expirationsDays,
-            holder.itemView.context
-        )
+        holder.expirationsSubject.text = item.subject
+        holder.expirationsType.text = item.type
+        holder.expirationsDate.text = item.date
+        setDays(item.date, holder.expirationsDays, holder.itemView.context)
     }
 
     // Definir cantidad de items

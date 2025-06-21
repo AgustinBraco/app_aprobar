@@ -27,12 +27,13 @@ class ScheduleAdapter(private val schedule: List<ScheduleData>) : RecyclerView.A
 
     // Asignar datos a cada ítem
     override fun onBindViewHolder(holder: ScheduleViewHolder, position: Int) {
-        val course = schedule[position]
-        holder.scheduleDay.text = course.day
-        holder.scheduleDate.text = course.date
-        holder.scheduleSubject.text = course.subject
-        holder.scheduleHour.text = course.hour
-        holder.scheduleLink.text = course.link
+        val item = schedule[position]
+
+        holder.scheduleDay.text = item.day
+        holder.scheduleDate.text = item.date
+        holder.scheduleSubject.text = item.subject
+        holder.scheduleHour.text = item.hour
+        holder.scheduleLink.text = item.link
         holder.scheduleLink.autoLinkMask = Linkify.WEB_URLS
         holder.scheduleLink.movementMethod = LinkMovementMethod.getInstance()
     }

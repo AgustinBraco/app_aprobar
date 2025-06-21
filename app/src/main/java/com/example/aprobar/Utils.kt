@@ -16,7 +16,7 @@ val today: LocalDate = LocalDate.now()
 val dateFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("dd/MM/yyyy")
 val dayFormatter: DateTimeFormatter = DateTimeFormatter.ofPattern("EEEE", locale)
 
-// Obtener una lista de días hábiles siguientes
+// Obtener lista con días hábiles siguientes
 fun getNextDays(count: Int) : List<String> {
     val nextDays = mutableListOf<String>()
     var currentDate = today
@@ -31,7 +31,7 @@ fun getNextDays(count: Int) : List<String> {
     return nextDays
 }
 
-// Obtener una lista de los días hábiles pasados
+// Obtener lista con días hábiles pasados
 fun getPreviousDays(count: Int): List<String> {
     val previousDays = mutableListOf<String>()
     var currentDate = today
@@ -90,12 +90,9 @@ fun setDays(
     view: TextView,
     context: Context
 ) {
-
-    // Formatear fecha y calcular días restantes
     val expirationDate = LocalDate.parse(date, dateFormatter)
     val days = ChronoUnit.DAYS.between(today, expirationDate)
     view.text = "$days días"
-
     when {
         days >= 16 -> {
             view.background = ContextCompat.getDrawable(context, R.drawable.style_rounded_green)
@@ -125,15 +122,10 @@ fun setDays(
     }
 }
 
-//PRESENTISMO
-//Calcular porcentaje de presentismo
-
-fun calculatePresenteeism(present: Int, absent: Int): Int {
-    if (present == 0) return 0
-    if (absent == 0) return 100
-
-    val total = present + absent
-    val presenteeism = present * 100 / total
-    return presenteeism
-
+// PRESENTISMO
+// Calcular porcentaje
+fun getPercentage(present: Int, absent: Int): Int = when {
+    present == 0 -> 0
+    absent == 0 -> 100
+    else -> (present * 100) / (present + absent)
 }

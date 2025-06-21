@@ -1,5 +1,6 @@
 package com.example.aprobar
 
+import android.annotation.SuppressLint
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -23,17 +24,16 @@ class PresenteeismAdapter(private val presenteeism: List<PresenteeismData>) : Re
     }
 
     // Asignar datos a cada ítem
+    @SuppressLint("SetTextI18n")
     override fun onBindViewHolder(holder: PresenteeismViewHolder, position: Int) {
-        val presenteeismSubject = presenteeism[position]
-        holder.presenteeismSubject.text = presenteeismSubject.subject
-        holder.presenteeismPresent.text = presenteeismSubject.present.toString()
-        holder.presenteeismAbsent.text = presenteeismSubject.absent.toString()
+        val item = presenteeism[position]
 
-        val presenteeismPercentage = calculatePresenteeism(presenteeismSubject.present, presenteeismSubject.absent)
-        holder.presenteeismPercentage.text = "$presenteeismPercentage%"
+        holder.presenteeismSubject.text = item.subject
+        holder.presenteeismPresent.text = item.present.toString()
+        holder.presenteeismAbsent.text = item.absent.toString()
+        holder.presenteeismPercentage.text = "${getPercentage(item.present, item.absent)}%"
     }
 
     // Definir cantidad de items
     override fun getItemCount(): Int = presenteeism.size
 }
-

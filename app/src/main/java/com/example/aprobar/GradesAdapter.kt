@@ -25,20 +25,15 @@ class GradesAdapter(private val grades: List<GradesData>) : RecyclerView.Adapter
 
     // Asignar datos a cada ítem
     override fun onBindViewHolder(holder: GradesViewHolder, position: Int) {
-        val grade = grades[position]
-        holder.gradesSubject.text = grade.subject
-        holder.gradesType.text = grade.type
-        holder.gradesGrade.text = grade.grade
-        holder.gradesDate.text = grade.date
+        val item = grades[position]
 
-        setStatus(
-            holder.gradesGrade.text.toString(),
-            holder.gradesStatus,
-            holder.itemView.context
-        )
+        holder.gradesSubject.text = item.subject
+        holder.gradesType.text = item.type
+        holder.gradesGrade.text = item.grade
+        holder.gradesDate.text = item.date
+        setStatus(item.grade, holder.gradesStatus, holder.itemView.context)
     }
 
     // Definir cantidad de items
     override fun getItemCount(): Int = grades.size
 }
-
