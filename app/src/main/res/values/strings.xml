@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Campus Virtual</string>
+    <string name="app_name">AprobAR</string>
     <string name="welcome">Bienvenido a AprobAR</string>
     <string name="logo">Imagen del logo de la institución</string>
     <string name="label_dni">DNI</string>
