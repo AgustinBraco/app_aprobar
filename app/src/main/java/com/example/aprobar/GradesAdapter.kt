@@ -31,7 +31,10 @@ class GradesAdapter(private val grades: List<GradesData>) : RecyclerView.Adapter
         holder.gradesType.text = item.type
         holder.gradesGrade.text = item.grade
         holder.gradesDate.text = item.date
+
         setStatus(item.grade, holder.gradesStatus, holder.itemView.context)
+
+        handleExpand(holder.itemView)
     }
 
     // Definir cantidad de items

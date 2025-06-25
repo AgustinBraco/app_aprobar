@@ -32,6 +32,8 @@ class PresenteeismAdapter(private val presenteeism: List<PresenteeismData>) : Re
         holder.presenteeismPresent.text = item.present.toString()
         holder.presenteeismAbsent.text = item.absent.toString()
         holder.presenteeismPercentage.text = "${getPercentage(item.present, item.absent)}%"
+
+        handleExpand(holder.itemView)
     }
 
     // Definir cantidad de items

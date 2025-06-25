@@ -2,8 +2,10 @@ package com.example.aprobar
 
 import android.annotation.SuppressLint
 import android.content.Context
+import android.view.View
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import androidx.fragment.app.Fragment
 import java.time.LocalDate
 import java.time.format.DateTimeFormatter
 import java.time.temporal.ChronoUnit
@@ -51,6 +53,35 @@ fun getDayName(dateString: String): String {
     val date = LocalDate.parse(dateString, dateFormatter)
     val dayName = date.format(dayFormatter).replaceFirstChar { it.uppercase(locale) }
     return dayName
+}
+
+// Alternar tamaño de u item
+@SuppressLint("StaticFieldLeak")
+var expandedView: View? = null
+fun handleExpand(item: View) {
+    item.setOnClickListener {
+        // Validar estado de referencia
+        if (expandedView != null && expandedView != item) {
+            expandedView
+                ?.animate()
+                ?.scaleX(1f)
+                ?.scaleY(1f)
+                ?.setDuration(200)
+                ?.start()
+        }
+
+        // Expandir item
+        val isExpanded = item.scaleX > 1f
+        val scale = if (isExpanded) 1f else 1.1f
+        item.animate()
+            .scaleX(scale)
+            .scaleY(scale)
+            .setDuration(200)
+            .start()
+
+        // Actualizar referencia
+        expandedView = if (isExpanded) null else item
+    }
 }
 
 // CALIFICACIONES

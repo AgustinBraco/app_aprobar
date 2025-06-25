@@ -17,6 +17,7 @@
 
         <!-- Estudiante -->
         <TextView
+            android:id="@+id/profile_item"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/blue"
@@ -33,45 +34,58 @@
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@color/blue"
             android:text="@string/home_grade"/>
 
-        <include layout="@layout/item_grades" />
+        <include layout="@layout/item_grades"
+            android:id="@+id/grade_item" />
 
         <!-- Próximo vencimiento -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@color/blue"
             android:text="@string/home_expiration"/>
 
-        <include layout="@layout/item_expirations" />
+        <include
+            layout="@layout/item_expirations"
+            android:id="@+id/expiration_item" />
 
         <!-- Próximo curso -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@color/blue"
             android:text="@string/home_schedule"/>
 
-        <include layout="@layout/item_schedule" />
+        <include layout="@layout/item_schedule"
+            android:id="@+id/schedule_item" />
 
         <!-- Asistencia -->
         <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginTop="12dp"
+            android:layout_marginBottom="6dp"
             android:textStyle="bold"
             android:textSize="20sp"
             android:textColor="@color/blue"
             android:text="@string/home_presenteeism"/>
 
-        <include layout="@layout/item_presenteeism" />
+        <include layout="@layout/item_presenteeism"
+            android:id="@+id/presenteeism_item" />
 
     </LinearLayout>
 

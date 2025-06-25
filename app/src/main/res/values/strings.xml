@@ -8,7 +8,7 @@
     <string name="value_password">**********</string>
     <string name="button_login">Ingresar</string>
     <string name="menu_home">Inicio</string>
-    <string name="menu_persona">Persona</string>
+    <string name="menu_profile">Cuenta</string>
     <string name="menu_grades">Calificaciones</string>
     <string name="menu_expirations">Vencimientos</string>
     <string name="menu_schedule">Cronograma</string>
@@ -21,6 +21,12 @@
     <string name="home_expiration">Próximo vencimiento</string>
     <string name="home_schedule">Próxima clase</string>
     <string name="home_presenteeism">Asistencia</string>
+    <string name="profile_name">Nombre:</string>
+    <string name="profile_lastname">Apellido:</string>
+    <string name="profile_dni">DNI:</string>
+    <string name="profile_age">Edad:</string>
+    <string name="profile_gender">Género:</string>
+    <string name="profile_career">Carrera:</string>
     <string name="drawer_open">Abrir menú</string>
     <string name="drawer_close">Cerrar menú</string>
     <string name="presenteeism_present">Presentes</string>
@@ -49,4 +55,5 @@
         y la experimentación sin comprometer la integridad ni confidencialidad de datos reales de estudiantes o instituciones educativas.</string>
     <string name="about_devs_title">Desarrollado por:</string>
     <string name="about_devs_text">• Ayelén Corrillo\n• Agustin Braco\n• Santiago Vanotti\n• Mariano Abizanda\n• Elisa Mele</string>
+    <string name="profile_icon">profile_icon</string>
 </resources>

@@ -6,25 +6,16 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:background="@color/lightblue"
-    android:padding="12dp"
-    android:layout_marginBottom="10dp"
+    android:paddingHorizontal="20dp"
+    android:paddingVertical="12dp"
+    android:clipChildren="false"
+    android:clipToPadding="false"
     tools:context=".GradesFragment">
-
-    <!-- Título -->
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:paddingBottom="12dp"
-        android:textStyle="bold"
-        android:textSize="26sp"
-        android:textColor="@color/blue"
-        android:textAlignment="center"
-        android:text="@string/grades_title"/>
 
     <!-- Items -->
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/grades_recycler"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"/>
+        android:layout_height="wrap_content" />
 
 </LinearLayout>

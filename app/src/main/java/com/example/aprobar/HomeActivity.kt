@@ -15,6 +15,10 @@ import androidx.fragment.app.Fragment
 import com.google.android.material.navigation.NavigationView
 
 class HomeActivity : AppCompatActivity() {
+    val dni: String by lazy {
+        intent.getStringExtra("dni") ?: ""
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_home)
@@ -48,6 +52,7 @@ class HomeActivity : AppCompatActivity() {
         navView.setNavigationItemSelectedListener { item ->
             when (item.itemId) {
                 R.id.menu_home -> replaceFragment(HomeFragment())
+                R.id.menu_profile -> replaceFragment(ProfileFragment())
                 R.id.menu_grades -> replaceFragment(GradesFragment())
                 R.id.menu_expirations -> replaceFragment(ExpirationsFragment())
                 R.id.menu_schedule -> replaceFragment(ScheduleFragment())

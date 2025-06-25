@@ -2,9 +2,11 @@ package com.example.aprobar
 
 import android.annotation.SuppressLint
 import android.os.Bundle
+import android.provider.ContactsContract.Profile
 import android.text.method.LinkMovementMethod
 import android.text.util.Linkify
 import android.view.View
+import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.activityViewModels
@@ -17,8 +19,25 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
+        // PERFIL
+        // Obtener elementos
+        val profileItem : TextView = view.findViewById(R.id.profile_item)
+
+        // Obtener datos mockeados
+        val profile = sharedViewModel.profile
+
+        // Asignar datos
+        profileItem.text = "${profile.name} ${profile.lastname}"
+        profileItem.setOnClickListener {
+            parentFragmentManager.beginTransaction()
+                .replace(R.id.fragments, ProfileFragment())
+                .addToBackStack(null)
+                .commit()
+        }
+
         // CALIFICACIONES
         // Obtener elementos
+        val gradeItem: LinearLayout = view.findViewById(R.id.grade_item)
         val gradesSubject: TextView = view.findViewById(R.id.grades_subject)
         val gradesStatus: TextView = view.findViewById(R.id.grades_status)
         val gradesType: TextView = view.findViewById(R.id.grades_type)
@@ -34,9 +53,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         gradesGrade.text = lastGrade.grade
         gradesDate.text = lastGrade.date
         setStatus(lastGrade.grade, gradesStatus, view.context)
+        handleExpand(gradeItem)
 
         // VENCIMIENTOS
         // Obtener elementos
+        val expirationItem: LinearLayout = view.findViewById(R.id.expiration_item)
         val expirationsSubject: TextView = view.findViewById(R.id.expirations_subject)
         val expirationsDays: TextView = view.findViewById(R.id.expirations_days)
         val expirationsType: TextView = view.findViewById(R.id.expirations_type)
@@ -50,9 +71,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         expirationsType.text = nextExpiration.type
         expirationsDate.text = nextExpiration.date
         setDays(nextExpiration.date, expirationsDays, view.context)
+        handleExpand(expirationItem)
 
         // CRONOGRAMA
         // Obtener elementos
+        val scheduleItem: LinearLayout = view.findViewById(R.id.schedule_item)
         val scheduleDay: TextView = view.findViewById(R.id.schedule_day)
         val scheduleDate: TextView = view.findViewById(R.id.schedule_date)
         val scheduleSubject: TextView = view.findViewById(R.id.schedule_subject)
@@ -70,9 +93,11 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         scheduleLink.text = nextSchedule.link
         scheduleLink.autoLinkMask = Linkify.WEB_URLS
         scheduleLink.movementMethod = LinkMovementMethod.getInstance()
+        handleExpand(scheduleItem)
 
         // PRESENTISMO
         // Obtener elementos
+        val presenteeismItem: LinearLayout = view.findViewById(R.id.presenteeism_item)
         val presenteeismSubject: TextView = view.findViewById(R.id.presenteeism_subject)
         val presenteeismPresent: TextView = view.findViewById(R.id.presenteeism_present)
         val presenteeismAbsent: TextView = view.findViewById(R.id.presenteeism_absent)
@@ -89,5 +114,6 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         presenteeismPresent.text = "$totalPresents"
         presenteeismAbsent.text = "$totalAbsents"
         presenteeismPercentage.text = "$totalPercentage%"
+        handleExpand(presenteeismItem)
     }
 }

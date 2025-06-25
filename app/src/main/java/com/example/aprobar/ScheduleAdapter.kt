@@ -36,6 +36,8 @@ class ScheduleAdapter(private val schedule: List<ScheduleData>) : RecyclerView.A
         holder.scheduleLink.text = item.link
         holder.scheduleLink.autoLinkMask = Linkify.WEB_URLS
         holder.scheduleLink.movementMethod = LinkMovementMethod.getInstance()
+
+        handleExpand(holder.itemView)
     }
 
     // Definir cantidad de items

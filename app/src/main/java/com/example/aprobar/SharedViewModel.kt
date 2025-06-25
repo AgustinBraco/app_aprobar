@@ -7,9 +7,12 @@ class SharedViewModel : ViewModel() {
     private val previousDays = getPreviousDays(20)
     private val nextDays = getNextDays(20)
 
+    // Perfil
+    val profile = ProfileData("Juan", "Perez", 23, "No especifica", "Desarrollo de Software")
+
     // Calificaciones
     val grades = listOf(
-        GradesData("Base de Datos", "Parcial", "8.5", previousDays[1]),
+        GradesData("Base de datos", "Parcial", "8.5", previousDays[1]),
         GradesData("POO","Trabajo Práctico", "6", previousDays[2]),
         GradesData("PPI", "Parcial", "4.5", previousDays[5]),
         GradesData("Testing", "Parcial", "5.5", previousDays[9]),

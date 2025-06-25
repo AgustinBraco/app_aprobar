@@ -29,7 +29,10 @@ class ExpirationsAdapter(private val expirations: List<ExpirationsData>) : Recyc
         holder.expirationsSubject.text = item.subject
         holder.expirationsType.text = item.type
         holder.expirationsDate.text = item.date
+
         setDays(item.date, holder.expirationsDays, holder.itemView.context)
+
+        handleExpand(holder.itemView)
     }
 
     // Definir cantidad de items
